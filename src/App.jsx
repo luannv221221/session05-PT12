@@ -19,7 +19,6 @@ function App() {
           <Route index element={<Product></Product>}></Route>
           <Route path='detail/:id' element={<ProductDetail></ProductDetail>}></Route>
         </Route>
-
       </Routes>
 
     </>
