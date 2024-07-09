@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function CategoryPage() {
     const [category, setCategory] = useState([]);
@@ -42,7 +42,8 @@ function CategoryPage() {
                                     <td>{item.categoryName}</td>
                                     <td>{item.categoryStatus ? "Active" : "inactive"}</td>
                                     <td>
-                                        <a href="" className='btn btn-primary'>Sửa</a>
+
+                                        <NavLink to={"/admin/edit-category/" + item.categoryId} className='btn btn-primary'>Sửa</NavLink>
                                         <a href="" className='btn btn-danger'>xóa</a>
                                     </td>
                                 </tr>

@@ -12,6 +12,7 @@ import LayoutBE from './components/admin/layouts/LayoutBE'
 import Dashboard from './components/admin/pages/Dashboard'
 import CategoryPage from './components/admin/pages/category/CategoryPage'
 import AddCategory from './components/admin/pages/category/AddCategory'
+import EditCategory from './components/admin/pages/category/EditCategory'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route index element={<Dashboard></Dashboard>}></Route>
           <Route path='category' element={<CategoryPage></CategoryPage>}></Route>
           <Route path='add-category' element={<AddCategory></AddCategory>}></Route>
+          <Route path='edit-category/:id' element={<EditCategory></EditCategory>}></Route>
         </Route>
       </Routes>
 
