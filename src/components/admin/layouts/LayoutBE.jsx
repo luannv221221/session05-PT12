@@ -9,10 +9,10 @@ function LayoutBE() {
         <>
             <Header></Header>
             <div className="d-flex">
-                <div className="left" style={{ width: '30 %' }}>
+                <div className="left" style={{ width: '20%' }}>
                     <Siderbar></Siderbar>
                 </div>
-                <div style={{ width: '70%' }} className=''>
+                <div style={{ width: '80%' }} className=''>
                     <Container>
                         <Outlet></Outlet>
                     </Container>

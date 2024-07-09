@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function CategoryPage() {
     const [category, setCategory] = useState([]);
@@ -17,7 +18,8 @@ function CategoryPage() {
     }
     return (
         <>
-            <a className='btn btn-success'>Thêm Mới</a>
+
+            <Link to="/admin/add-category" className='btn btn-success'>Thêm Mới</Link>
             <div
                 className="table-responsive"
             >
