@@ -8,16 +8,28 @@ function Product() {
         callAPI();
     }, [])
 
-    const callAPI = () => {
-        fetch("http://localhost:8080/api/v1/products").then(
-            (respone) => respone.json()
-        ).then((data) => {
-            console.log("Dư lieu", data);
+    // const callAPI = () => {
+    //     fetch("http://localhost:8080/api/v1/products")
+    //     .then(
+    //         (respone) => respone.json()
+    //     ).then((data) => {
+    //         console.log("Dư lieu", data);
+    //         setProducts(data.content);
+    //     }).catch(err => {
+    //         console.log(err);
+    //     })
+    // }
+
+    const callAPI = async () => {
+        try {
+            const respone = await fetch("http://localhost:8080/api/v1/products");
+            const data = await respone.json();
             setProducts(data.content);
-        }).catch(err => {
-            console.log(err);
-        })
+        } catch (error) {
+            console.log(error);
+        }
     }
+
     return (
         <>
             {
